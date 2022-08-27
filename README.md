@@ -1,28 +1,24 @@
-# GLB Animation Combiner
+# React with Bun runtime
 
-## How to use it?
+This is a React project bootstrapped with [bun](https://bun.sh/).
+
+## Getting Started
+
+### Cloning the repo
 
 ```sh
-$ git clone https://github.com/juunini/glb-animation-combiner.git
-$ cd glb-animation-combiner
-$ pnpm i
-$ pnpm dev
+bun create react ./react-bun-app
 ```
 
-enter http://localhost:5173
+### Development
 
-## How to customize it?
+First, run the development server.
 
-See the `src/App.tsx` line 7 ~ 20,  
-you can change animation name and file names and glb root name.  
+```
+bun dev
+```
 
-Files path is `public/models` and `public/animations`  
+Open http://localhost:3000 with your browser to see the result.
 
-## If you want combine ready player me avatar
+You can start editing the page by modifying src/App.jsx. The page auto-updates as you edit the file.
 
-1. make avatar from [ready player me](https://readyplayer.me) and download glb
-2. change your glb to fbx by blender
-3. go to [mixamo](https://www.mixamo.com) and upload fbx
-4. choose animations and download fbx **without skin**
-5. change animation fbx to glb by blender
-6. use https://github.com/juunini/glb-animation-combiner
