@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Group } from 'three'
+import download from 'get-file-using-a-tag'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { GLTFExporter } from 'three/examples/jsm/exporters/GLTFExporter.js'
 import type { GLTF } from 'three/examples/jsm/loaders/GLTFLoader'
@@ -43,7 +44,10 @@ async function combineAnimations (): Promise<void> {
 
   gltfExporter.parse(
     gltf.scene,
-    (glb) => download(glb as ArrayBuffer, 'scene.glb'),
+    (glb) => download({
+      arrayBuffer: glb as ArrayBuffer,
+      fileName: 'scene.glb'
+    }),
     console.error,
     { binary: true, animations: group.animations }
   )
@@ -58,16 +62,6 @@ async function loadAnimations (group: Group, animations: Object): Promise<void> 
     gltf.animations[0].name = name
     group.animations.push(gltf.animations[0])
   }
-}
-
-function download (arrayBuffer: ArrayBuffer, fileName: string): void {
-  const blob = new Blob([arrayBuffer], { type: 'application/octet-stream' })
-  const url = URL.createObjectURL(blob)
-
-  const a = document.createElement('a')
-  a.href = url
-  a.download = fileName
-  a.click()
 }
 
 async function asyncGltfLoad (gltfLoader: GLTFLoader, path: string): Promise<GLTF> {
