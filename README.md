@@ -1,21 +1,17 @@
 # GLB Animation Combiner
 
 > :warning: bun is experimental.  
-> and this branch is not working.  
-> 
-> I was send bug report to bun  
-> https://github.com/oven-sh/bun/issues/1161
 
 ## How to use it?
 
 ```sh
 $ git clone https://github.com/juunini/glb-animation-combiner.git
 $ cd glb-animation-combiner
-$ pnpm i
-$ pnpm dev
+$ bun install
+$ bun dev
 ```
 
-enter http://localhost:5173
+enter http://localhost:3000
 
 ## How to customize it?
 

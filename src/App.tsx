@@ -1,21 +1,21 @@
 import { useEffect } from 'react'
 import { Group } from 'three'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { GLTFExporter } from 'three/examples/jsm/exporters/GLTFExporter'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import { GLTFExporter } from 'three/examples/jsm/exporters/GLTFExporter.js'
 import type { GLTF } from 'three/examples/jsm/loaders/GLTFLoader'
 
-const modelPath = '/models/scene.glb'
+const modelPath = '/public/models/scene.glb'
 const animations = {
-  Idle: '/animations/idle.glb',
-  Walking: '/animations/walk.glb',
-  WalkingBackwards: '/animations/walkBack.glb',
-  LeftStrafeWalk: '/animations/walkLeft.glb',
-  RightStrafeWalk: '/animations/walkRight.glb',
-  Running: '/animations/run.glb',
-  RunningBackward: '/animations/runBack.glb',
-  LeftStrafe: '/animations/runLeft.glb',
-  RightStrafe: '/animations/runRight.glb',
-  Flying: '/animations/fly.glb'
+  Idle: '/public/animations/idle.glb',
+  Walking: '/public/animations/walk.glb',
+  WalkingBackwards: '/public/animations/walkBack.glb',
+  LeftStrafeWalk: '/public/animations/walkLeft.glb',
+  RightStrafeWalk: '/public/animations/walkRight.glb',
+  Running: '/public/animations/run.glb',
+  RunningBackward: '/public/animations/runBack.glb',
+  LeftStrafe: '/public/animations/runLeft.glb',
+  RightStrafe: '/public/animations/runRight.glb',
+  Flying: '/public/animations/fly.glb'
 }
 const gltfName = 'Armature'
 
